@@ -12,6 +12,7 @@
 </head>
 <body>
   <h2>관리자 페이지</h2>
-  <a href="/list?id=${sessionScope.loginMember.memberId='amin'}}">회원목록</a>
+  <a href="/memberPages/list">회원목록</a>
+  <a href="/registrar/save-form">등록업체</a>
 </body>
 </html>

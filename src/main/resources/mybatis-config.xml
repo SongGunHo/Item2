@@ -4,5 +4,6 @@
 <configuration>
     <typeAliases>
         <typeAlias type="com.Item.ex.dto.MemberDTO" alias="post" />
+        <typeAlias type="com.Item.ex.dto.RegistrarDTO" alias="post" />
     </typeAliases>
 </configuration>

@@ -3,8 +3,24 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-<mapper namespace="">
-
+<mapper namespace="Registrar">
+    <select id="save" parameterType="registrar">
+        select * form registrar_table (registrarCompany,registrarName,registrarPhone)
+        value(#{registrarCompany},#{registrarName},#{registrarPhone});
+    </select>
+    <select id="findAll" parameterType="registrar">
+        select *from registrar_table;
+    </select>
+    <select id="findById" parameterType="registrar" resultType="registrar">
+        select * from registrar_table where id=#{id};
+    </select>
+    <update id="update" parameterType="registrar">
+        update from registrar_table where registrarCompany=#{registrarCompany} and
+        registrarName=#{registrarName} and registrarPhone=#{registarPhone};
+    </update>
+    <delete id="delete" parameterType="registrar">
+        delete from registrar_table where id=#{id};
+    </delete>
 </mapper>
 
 

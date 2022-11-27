@@ -19,8 +19,31 @@
         <input class="form=control" type="text" id="memberName" placeholder="이름">
         <input class=form-control type="text" id="memberAge" placeholder="나이">
         <input class="form-control" type="text" id="memberPhone" placeholder="전화번호">
-        <input class="form-control" type="submit" value="회원 가입">
+        <button class="btn btn-outline-primary d-grid mx-auto" type="button" onclick="aa()">회원가입</button>
     </form>
 </div>
 </body>
+<script>
+    const aa =()=>{
+    const memberId = document.getElementById("memberId").value;
+    const idCheck = document.getElementById("idCheck");
+    $.ajax({
+        type:"post",
+        url:"/id-Check",
+        data:{"memberId":memberId},
+        dataType:"text",
+        success: function (result){
+        if(result == 'ok'){
+            alert("성공");
+            saveForm.submit();
+        }else {
+            alert("실패");
+        }
+        },
+        error: function (){
+            alert("아이디가 있습니다")
+        }
+    })
+    }
+</script>
 </html>

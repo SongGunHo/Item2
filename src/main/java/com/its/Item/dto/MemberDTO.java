@@ -7,13 +7,16 @@ public class MemberDTO {
     private Long id;
     private String memberId;
     private String memberPassword;
+    private String memberName;
     private int memberAge;
-    private String memberPhnoe;
+    private String memberPhone;
 
-    public MemberDTO(String memberId, String memberPassword, int memberAge, String memberPhnoe) {
+    public MemberDTO(Long id, String memberId, String memberPassword, String memberName, int memberAge, String memberPhone) {
+        this.id = id;
         this.memberId = memberId;
         this.memberPassword = memberPassword;
+        this.memberName = memberName;
         this.memberAge = memberAge;
-        this.memberPhnoe = memberPhnoe;
+        this.memberPhone = memberPhone;
     }
 }

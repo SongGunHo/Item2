@@ -20,9 +20,13 @@
 <delete id="delete" parameterType="Long">
     delete from member_table where id=#{id}
 </delete>
-<select id="list" parameterType="member">
+<select id="findAll" parameterType="member">
     select * from member_table;
 </select>
+<select id="idCheck" parameterType="member">
+    select memberId from member_table where memeberId=#{memberId};
+</select>
+
 </mapper>
 
 
